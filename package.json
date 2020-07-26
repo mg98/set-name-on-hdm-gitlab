@@ -1,7 +1,7 @@
 {
   "name": "set-fullname-on-hdm-gitlab",
   "version": "1.0.0",
-  "description": "",
+  "description": "Setzt den vollen Namen im Profil eines Benutzeraccounts im GitLab der HdM",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "puppeteer": "^5.2.1",
     "yargs": "^15.4.1"
   },

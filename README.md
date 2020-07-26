@@ -13,12 +13,27 @@ _* Hierbei handelt es sich um eine Vermutung und keine tatsächlich durchgeführ
 ## Getting Started
 
 1. `git clone https://github.com/mg98/set-name-on-hdm-gitlab`
+2. `cd set-name-on-hdm-gitlab`
+
+#### Using Node.js
+
 2. `npm install`
 3. `node index.js --username=xy123 --password="DeinPassword123\$" --name="Dein Wunschname"`
 
 Der Befehl aus Schritt 3 kann regelmäßig als Cronjob ausgeführt werden.
 
+Alternativ können die Parameter als Umgebungsvariablen hinterlegt werden (siehe Abschnitt "Using Docker" Schritt 2 bis 3). Parameter, welche als Umgebungsvariablen vorliegen, werden gegenüber CLI Argumenten bevorzugt.
+
 **Achtung:** Special Characters müssen mit einem `\` escaped werden.
+
+#### Using Docker
+
+2. `cp .env.example .env`
+3. Öffne die Datei `.env` und setze die entsprechenden Werte.
+4. `docker build --tag set-name-on-hdm-gitlab .`
+5. `docker run -it set-name-on-hdm-gitlab`
+
+Der Befehl aus Schritt 5 kann regelmäßig als Cronjob ausgeführt werden.
 
 ## Command Line Options
 
