@@ -2,7 +2,7 @@
 
 ![Header](./header.png)
 
-Wer seinen Namen im GitLab der HdM ändert, behält ihn leider nicht für lange. Die Hochschule hat einen Cronjob eingerichtet, der in Intervallen von etwa 30 Minuten euren Namen wieder mit eurem im Studienbüro hinterlegten bürgerlichen Namen überschreibt.
+Wer seinen Namen im GitLab der HdM ändert, behält ihn leider nicht für lange. Die Hochschule hat einen Cronjob eingerichtet, der euren Namen wieder mit eurem im Studienbüro hinterlegten bürgerlichen Namen überschreibt.
 
 Viele betrachten dies als einen Eingriff in ihre Privatsphäre, Verstoß gegen die Datenschutzgrundverordnung oder sogar Diskriminierung gegen Personen, die sich nicht als sich selber identifizieren.*
 
@@ -15,7 +15,7 @@ _* Hierbei handelt es sich um eine Vermutung und keine tatsächlich durchgeführ
 1. `git clone https://github.com/mg98/set-name-on-hdm-gitlab`
 2. `cd set-name-on-hdm-gitlab`
 
-#### Using Node.js
+### Using Node.js
 
 2. `npm install`
 3. `node index.js --username=xy123 --password="DeinPassword123\$" --name="Dein Wunschname"`
@@ -26,7 +26,7 @@ Alternativ können die Parameter als Umgebungsvariablen hinterlegt werden (siehe
 
 **Achtung:** Special Characters müssen mit einem `\` escaped werden.
 
-#### Using Docker
+### Using Docker
 
 2. `cp .env.example .env`
 3. Öffne die Datei `.env` und setze die entsprechenden Werte.
