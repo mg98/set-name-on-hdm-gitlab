@@ -10,18 +10,17 @@ if (!args.password) {
   console.error('Please provide your password.');
   process.exit(1);
 }
-if (!args.username) {
+if (!args.fullname) {
   console.error('Please provide your wished full name.');
   process.exit(1);
 }
 
 (async () => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({ headless: !args.browser });
+  const page = await browser.newPage();
+  await page.setViewport({ width: 1280, height: 1800 });
 
   try {
-    const page = await browser.newPage({ headless: !args.browser });
-    await page.setViewport({ width: 1280, height: 1800 });
-
     // Login
     await page.goto('https://gitlab.mi.hdm-stuttgart.de');
     await page.type('#username', args.username);
@@ -38,10 +37,12 @@ if (!args.username) {
     }
 
     // Set new full name and update profile
-    await page.evaluate(() => document.getElementById('user_name').value = args.fullname);
+    await page.waitForSelector('#user_name');
+    await page.evaluate((fullname) => document.getElementById('user_name').value = fullname, args.fullname);
     await page.click('[type=submit]');
 
     await page.waitForResponse((response) => response.status() === 200);
+    console.log(`Full name successfully changed to ${args.fullname}!`);
   } catch (err) {
     console.error(err);
   } finally {
