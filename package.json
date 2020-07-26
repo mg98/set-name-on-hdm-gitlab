@@ -4,19 +4,24 @@
   "description": "Setzt den vollen Namen im Profil eines Benutzeraccounts im GitLab der HdM",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/index.js",
+    "deploy": "./node_modules/serverless/bin/serverless.js deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chrome-aws-lambda": "^3.1.1",
     "dotenv": "^8.2.0",
     "puppeteer": "^5.2.1",
+    "puppeteer-core": "^5.0.0",
     "yargs": "^15.4.1"
   },
   "devDependencies": {
     "eslint": "^7.5.0",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0"
+    "eslint-plugin-import": "^2.22.0",
+    "serverless": "^1.76.1",
+    "serverless-dotenv-plugin": "^3.0.0"
   }
 }
