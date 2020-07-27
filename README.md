@@ -17,22 +17,20 @@ _* Hierbei handelt es sich um eine Vermutung und keine tatsächlich durchgeführ
 3. `cp .env.example .env`
 4. Öffne die Datei `.env` und setze die entsprechenden Werte.
 
-### Using Node.js
+**Achtung:** Special Characters müssen mit einem `\` escaped werden.
+
+### Using Node.js (12+)
 
 5. `npm install`
 6. `npm start`
 
 Der Befehl aus Schritt 6 kann regelmäßig als Cronjob ausgeführt werden.
 
-
-
 Alternativ können die Parameter als Argumente an das CLI übergeben werden. Die App wird Umgebungsvariablen, wenn sie gesetzt sind, allerdings immer bevorzugen.
-**Achtung:** Special Character müssen mit einem `\` escaped werden.
+
 ```bash
-node src/index.js --username=xy123 --password="DeinPassword123\"" --name="Dein Wunschname"
+node src/index.js --username=xy123 --password="DeinPassword123\$" --name="Dein Wunschname"
 ```
-
-
 
 ### Using Docker
 

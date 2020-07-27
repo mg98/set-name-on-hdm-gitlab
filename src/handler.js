@@ -11,7 +11,7 @@ module.exports.default = async (event) => {
       ignoreHTTPSErrors: true,
     });
 
-    await runScript(browser, process.env.username, process.env.password, process.env.fullname);
+    await runScript(browser, process.env.hdm_user, process.env.password, process.env.fullname);
 
     return {
       statusCode: 200,
