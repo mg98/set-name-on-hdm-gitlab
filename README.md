@@ -6,7 +6,7 @@ Wer seinen Namen im GitLab der HdM ändert, behält ihn leider nicht für lange.
 
 Viele betrachten dies als einen Eingriff in ihre Privatsphäre, Verstoß gegen die Datenschutzgrundverordnung oder sogar Diskriminierung gegen Personen, die sich nicht als sich selber identifizieren.*
 
-Wer dieser Maßnahme der HdM entgegen wirken möchte, kann diese Node.js App als eigenen Cronjob einstellen. Die App wird sich bei jedem Aufruf in euren GitLab Account einloggen und euren Namen mit eurem gewünschten Namen überschreiben.
+Wer dieser Maßnahme der HdM entgegenwirken möchte, kann diese Node.js App als eigenen Cronjob einstellen. Die App wird sich bei jedem Aufruf in euren GitLab Account einloggen und euren Namen mit eurem gewünschten Namen überschreiben.
 
 _* Hierbei handelt es sich um eine Vermutung und keine tatsächlich durchgeführte Meinungsumfrage._
 
@@ -27,7 +27,7 @@ Der Befehl aus Schritt 6 kann regelmäßig als Cronjob ausgeführt werden.
 
 
 Alternativ können die Parameter als Argumente an das CLI übergeben werden. Die App wird Umgebungsvariablen, wenn sie gesetzt sind, allerdings immer bevorzugen.
-**Achtung:** Special Characters müssen mit einem `\` escaped werden.
+**Achtung:** Special Character müssen mit einem `\` escaped werden.
 ```bash
 node src/index.js --username=xy123 --password="DeinPassword123\"" --name="Dein Wunschname"
 ```
@@ -43,7 +43,7 @@ Der Befehl aus Schritt 6 kann regelmäßig als Cronjob ausgeführt werden.
 
 ### Deploy as Serverless Function (empfohlen!)
 
-Dieses Projekt beinhaltet auch ein fertiges Setup um die Funktion als planmäßig auszuführende Serverless-Funktion in AWS Lambda bereitzustellen.
+Dieses Projekt beinhaltet auch ein fertiges Setup, um die Funktion als planmäßig auszuführende Serverless-Funktion in AWS Lambda bereitzustellen.
 
 5. `npm install`
 6. `npm run deploy`
@@ -54,8 +54,8 @@ Die genaue Provisionierung kann in `serverless.yml` eingesehen und konfiguriert 
 
 **Preiskalkukation:**
 
-- Die Ausführung der Funktion im Intervall von 15 Minuten wird vollständig vom kostenloses Kontigent gedeckt.
-- Außerhalb des kostenlosen Kontigents liegen die Kosten bei etwa 3,07 €/ Jahr.
+- Die Ausführung der Funktion im Intervall von 15 Minuten wird vollständig vom kostenloses Kontingent gedeckt.
+- Außerhalb des kostenlosen Kontingents liegen die Kosten bei etwa 3,07 €/ Jahr.
 - Weitere Informationen zu den Kosten von AWS Lambda [hier](https://aws.amazon.com/de/lambda/pricing/).
 
 ## Command Line Options
