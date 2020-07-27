@@ -60,7 +60,7 @@ package:
 functions:
   setNameOnHdmGitlab:
     handler: src/handler.default
-    memorySize: 1600MB
+    memorySize: 1536MB
     timeout: 10
     events:
       - schedule: rate(15 minutes)

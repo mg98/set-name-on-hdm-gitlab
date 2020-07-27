@@ -48,7 +48,12 @@ Dieses Projekt beinhaltet auch ein fertiges Setup um die Funktion als planmäßi
 
 Wenn auf dem System AWS Credentials hinterlegt sind, wird dieser Befehl eine Lambda-Funktion in der AWS Cloud erstellen. Die Funktion wird automatisch alle 15 Minuten ausgeführt.
 
-Die genaue Provisionierung kann in `serverless.yml` eingsehen und konfiguriert werden. Durch Anpassungen sollten auch Deployments zu anderen Cloud-Anbietern möglich sein. Siehe [https://www.serverless.com/framework/docs/providers/](https://www.serverless.com/framework/docs/providers/).
+Die genaue Provisionierung kann in `serverless.yml` eingesehen und konfiguriert werden. Durch Anpassungen sollten auch Deployments zu anderen Cloud-Anbietern möglich sein. Siehe [https://www.serverless.com/framework/docs/providers/](https://www.serverless.com/framework/docs/providers/).
+
+**Preiskalkukation:**
+
+- Die Ausführung der Funktion im Intervall von 15 Minuten wird vollständig vom kostenloses Kontigent gedeckt.
+- Außerhalb des kostenlosen Kontigents liegen die Kosten bei etwa 3,07 €/ Jahr.
 
 ## Command Line Options
 
