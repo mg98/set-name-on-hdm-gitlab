@@ -54,6 +54,7 @@ Die genaue Provisionierung kann in `serverless.yml` eingesehen und konfiguriert 
 
 - Die Ausführung der Funktion im Intervall von 15 Minuten wird vollständig vom kostenloses Kontigent gedeckt.
 - Außerhalb des kostenlosen Kontigents liegen die Kosten bei etwa 3,07 €/ Jahr.
+- Weitere Informationen zu den Kosten von AWS Lambda [hier](https://aws.amazon.com/de/lambda/pricing/).
 
 ## Command Line Options
 
