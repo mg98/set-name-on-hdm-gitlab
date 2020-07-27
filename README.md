@@ -24,13 +24,15 @@ _* Hierbei handelt es sich um eine Vermutung und keine tatsächlich durchgeführ
 
 Der Befehl aus Schritt 6 kann regelmäßig als Cronjob ausgeführt werden.
 
-**Achtung:** Special Characters müssen mit einem `\` escaped werden.
+
 
 Alternativ können die Parameter als Argumente an das CLI übergeben werden. Die App wird Umgebungsvariablen, wenn sie gesetzt sind, allerdings immer bevorzugen.
-
+**Achtung:** Special Characters müssen mit einem `\` escaped werden.
 ```bash
-node src/index.js --username=xy123 --password="DeinPassword123\$" --name="Dein Wunschname"
+node src/index.js --username=xy123 --password="DeinPassword123\"" --name="Dein Wunschname"
 ```
+
+
 
 ### Using Docker
 
