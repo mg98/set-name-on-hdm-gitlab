@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "deploy": "./node_modules/serverless/bin/serverless.js deploy",
+    "deploy": "node node_modules/serverless/bin/serverless.js deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

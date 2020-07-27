@@ -3,7 +3,7 @@ const args = require('yargs').argv;
 const puppeteer = require('puppeteer');
 const runScript = require('./script');
 
-const username = process.env.username || args.username;
+const username = process.env.hdm_user || args.username;
 const password = (process.env.password || args.password).replace(/\\/g, '');
 const fullname = process.env.fullname || args.fullname;
 
