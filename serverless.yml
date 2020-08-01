@@ -11,6 +11,7 @@ service: set-fullname-on-hdm-gitlab
 provider:
   name: aws
   runtime: nodejs12.x
+  region: eu-central-1
   environment:
     CUSTOM_CHROME: true
 
@@ -18,10 +19,6 @@ plugins:
   - serverless-dotenv-plugin
 
 individually: true
-
-# you can overwrite defaults here
-#  stage: dev
-region: eu-central-1
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
